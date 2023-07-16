@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import { useEffect, useState } from 'react';
+import Product from './components/Product';
+import Sepet from './components/Sepet';
+import { useSelector, useDispatch } from 'react-redux'
 
+import { decrement, increment,remove,totalPrice} from './features/counter/counterSlice'
 function App() {
+  const [money,setMoney]=useState(4000000)
+  const sepet = useSelector((state) => state.counter.sepet)
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(totalPrice())
+   
+   },[sepet])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header money={money}/>
+     <Product/>
+    <Sepet/>
+    
+     
     </div>
   );
 }

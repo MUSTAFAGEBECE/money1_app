@@ -1,0 +1,12 @@
+.sepet{
+    width: 85%;
+    margin: 0 auto;
+}
+.sepet button{
+    width: 100px;
+    height: 40px;
+    background-color: brown;
+    color: white;
+    border-radius: 50px;
+    border: none;
+}

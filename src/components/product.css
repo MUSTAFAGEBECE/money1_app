@@ -1,0 +1,39 @@
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: flex-start;
+   
+}
+.pr-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 20%;
+    border: 1px solid blue;
+    padding: 40px 0;
+    background-color: rgb(184, 169, 169);
+    
+
+}
+.pr-div img{
+    width: 100px;
+    height: 100px;
+}
+.pr-hes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+.pr-hes button{
+  width: 50px;
+  height: 30px;
+  background-color:red;
+  color: white;
+  border: none;
+  border-radius: 50px;
+}
